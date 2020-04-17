@@ -35,8 +35,7 @@ app.post("/api/notes", function(req, res){
             return console.log(err);
         }
     });
-
-    res.json(newNotes);
+     res.json(newNotes);
 })
 
 // Listener
