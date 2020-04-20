@@ -1,9 +1,10 @@
 const express = require("express");
 const path = require("path");
-const notes = require("../db/notes.json");
+let notes = require("../db/notes");
 const fs = require("fs");
 
 // APP and PORT
+
 
 const app = express();
 const PORT = 5000;
@@ -28,9 +29,15 @@ app.get("/api/notes", function(req, res) {
 }); 
     
 app.post("/api/notes", function(req, res){
-    let newNotes = JSON.stringify(req.body);
-    notes.push(newNotes);
-    fs.writeFileSync("../db/notes.json", notes, function(err){
+
+   let newNotes = (req.body);
+   notes.push(newNotes); 
+   fs.readFileSync("../db/notes.json", notes, function(err){
+       if (err) {
+        return console.log(err);
+   }
+   });
+   fs.writeFileSync("../db/notes.json", JSON.stringify(notes), function(err){
         if (err) {
             return console.log(err);
         }
