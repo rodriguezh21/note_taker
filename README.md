@@ -21,8 +21,8 @@ SO THAT I can re-organize my thoughts and keep track of tasks I need to complete
 TABLE OF CONTENTS
 
 * [How it works](#HowItWorks)
-* [Tech Used](#TechnologiesUsed)
-* [Credits](#Credits)
+* [Technologies Used](#TechnologiesUsed)
+
 
 ***
 
